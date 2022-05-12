@@ -2,6 +2,7 @@ $wu = new-object -com “Microsoft.Update.Searcher”
 $totalupdates = $wu.GetTotalHistoryCount()
 $all = $wu.QueryHistory(0,$totalupdates)
 $OutputCollection= @()
+#loops for all kbs installed 
 Foreach ($update in $all)
 {
 $string = $update.title
